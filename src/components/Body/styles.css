@@ -1,0 +1,122 @@
+#Deco-body{
+    width: 100%;
+    height: 96vh;
+    background: linear-gradient(-135deg, #383838, #292929)
+}
+
+#entrada{
+    max-width: 500px;
+    margin: 0 auto 0;
+    background: none;
+    padding: 30px;
+    /*box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
+}
+
+#Deco-form {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    background: none;
+}
+
+#Deco-form input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    background: none;
+    color: #fafafa;
+}
+
+#Deco-form label{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #cfcfcf;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+#Deco-form input:focus ~ label,
+#Deco-form input:valid ~ label{
+    transform: translateY(-30px);
+    font-size: 12px;
+    color: #fafafa;
+}
+
+#underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+#underline:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #fafafa;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+#Deco-form input:focus ~ #underline:before,
+#Deco-form input:valid ~ #underline:before{
+    transform: scaleX(1);
+    font-size: 12px;
+    color: #fafafa;
+}
+
+
+#Deco-resp {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    color: #cfcfcf;
+    font-style: italic;
+    position: relative;
+}
+
+#Deco-resp strong{
+    position: relative;
+    animation: moveUp 3s;
+    margin-top: 50px;
+}
+#Deco-resp p{
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation: moveUp 3s;
+}
+
+#side1{
+    position: absolute;
+    background-image: url('https://thumbs.dreamstime.com/b/mapa-de-ruas-da-cidade-115381567.jpg');
+    background-position: left;
+    height: 96vh;
+    width: 8%;
+    left: 0px;
+}
+
+#side2{
+    position: absolute;
+    background-image: url('https://thumbs.dreamstime.com/b/mapa-de-ruas-da-cidade-115381567.jpg');
+    background-position: right;
+    height: 96vh;
+    width: 8%;
+    right: 0px;
+    top: 0px;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    } 
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}

@@ -1,0 +1,13 @@
+footer#Deco-footer {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
+    background-color: #116fbf;
+    color: #fafafa;
+    font-size: 10px;
+    font-style: italic;
+    justify-content: center;
+    align-items: center;
+}
