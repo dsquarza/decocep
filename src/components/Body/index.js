@@ -9,11 +9,11 @@ export default class Body extends Component{
        
     buscaCep = async(e) => {
         e.preventDefault();
-        
-
+    
         let artEl = document.querySelector('#Deco-resp');
         let inputEl = document.querySelector('#Deco-input');
         let cep = inputEl.value;
+
         try{
             const response = await api.get(`${cep}/json/`);
             this.setState({endereco: response.data});                         
@@ -32,19 +32,15 @@ export default class Body extends Component{
             artEl.appendChild(strEl);
             artEl.appendChild(p1);
             artEl.appendChild(p2);    
-
             
             inputEl.value = '';      
     
-        }catch(err){
+        } catch(err){
             alert('CEP não encontrado!');
         }
     }
 
-    
-
-    render(){
-           
+    render(){          
         return (
             <div id='Deco-body'>
                 <div id='side1'/>
@@ -57,8 +53,7 @@ export default class Body extends Component{
                 </div>
                 <article id='Deco-resp'></article>
                 <div id='side2'/>
-            </div>
-            
+            </div>           
         )
     }
 }
